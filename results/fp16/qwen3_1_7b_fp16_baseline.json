@@ -1,0 +1,10 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "precision": "FP16",
+  "gpu": "NVIDIA GeForce RTX 4060 Ti",
+  "input_tokens": 11,
+  "output_tokens": 64,
+  "elapsed_time_s": 2.606,
+  "tokens_per_second": 24.562,
+  "peak_vram_gb": 3.224
+}
