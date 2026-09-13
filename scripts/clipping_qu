@@ -1,0 +1,35 @@
+import torch
+
+x = torch.tensor([
+    -1.0,
+    -0.8,
+    -0.5,
+    0.0,
+    0.4,
+    0.7,
+    1.0,
+    10.0
+])
+
+qmax = 127
+
+# 不 clipping 的量化方法
+scale_no_clip = x.abs().max() / qmax
+q_no_clip = torch.round(x / scale_no_clip)
+x_hat_no_clip = q_no_clip * scale_no_clip
+
+# clipping 的量化方法
+x_clip = torch.clamp(x, -1.0, 1.0)
+scale_clip = x_clip.abs().max() / qmax
+q_clip = torch.round(x_clip / scale_clip)
+x_hat_clip = q_clip * scale_clip
+
+print("Original tensor:", x)
+print("scale (no clipping):", scale_no_clip)  
+print("Quantized tensor (no clipping):", q_no_clip)
+print("Dequantized tensor (no clipping):", x_hat_no_clip)
+print("scale (clipping):", scale_clip)
+print("Quantized tensor (clipping):", q_clip)
+print("Dequantized tensor (clipping):", x_hat_clip) 
+print("Error (no clipping):", x - x_hat_no_clip)
+print("Error (clipping):", x - x_hat_clip)
