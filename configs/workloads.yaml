@@ -1,0 +1,15 @@
+prompt_sweep:
+  - name: prompt_128
+    prompt_tokens: 128
+    generation_tokens: 128
+    context_size: 4096
+
+  - name: prompt_512
+    prompt_tokens: 512
+    generation_tokens: 128
+    context_size: 4096
+
+  - name: prompt_2048
+    prompt_tokens: 2048
+    generation_tokens: 128
+    context_size: 4096

@@ -1,0 +1,2 @@
+timestamp,model,workload,target_prompt_tokens,generation_tokens,context_size,gpu_layers,prefill_tps,decode_tps
+2026-09-14T22:43:44,Qwen3-1.7B-Q4_K_M.gguf,prompt_128,128,128,4096,99,4025.7,151.7

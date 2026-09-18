@@ -1,0 +1,13 @@
+| model                          |       size |     params | backend    | ngl |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | --------------: | -------------------: |
+| qwen3 1.7B F16                 |   3.78 GiB |     2.03 B | CUDA       |  99 |           pp128 |     6013.39 ± 637.25 |
+| qwen3 1.7B F16                 |   3.78 GiB |     2.03 B | CUDA       |  99 |           pp512 |    12277.48 ± 719.10 |
+| qwen3 1.7B F16                 |   3.78 GiB |     2.03 B | CUDA       |  99 |          pp2048 |    12756.72 ± 102.83 |
+
+build: e5a8d439c (10892)
+
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8187 MiB):
+  Device 0: NVIDIA GeForce RTX 4060 Ti, compute capability 8.9, VMM: yes, VRAM: 8187 MiB
+load_backend: loaded CUDA backend from D:\code\relavate_file\llama-b10892-bin-win-cuda-13.3-x64\ggml-cuda.dll
+load_backend: loaded RPC backend from D:\code\relavate_file\llama-b10892-bin-win-cuda-13.3-x64\ggml-rpc.dll
+load_backend: loaded CPU backend from D:\code\relavate_file\llama-b10892-bin-win-cuda-13.3-x64\ggml-cpu-alderlake.dll

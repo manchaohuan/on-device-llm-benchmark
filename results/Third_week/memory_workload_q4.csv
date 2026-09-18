@@ -1,0 +1,4 @@
+quantization,prompt_tokens,context_size,generation_tokens,gpu_layers,repetitions,peak_vram_mib,peak_ram_mib
+Q4_K_M,128,4096,128,99,3,1700.0,1478.1953125
+Q4_K_M,512,4096,128,99,3,1697.0,1482.3828125
+Q4_K_M,2048,4096,128,99,3,1697.0,1484.71484375
